@@ -37,25 +37,26 @@ void CreateRandom2DArray(int[,] matrix, int height, int width)
     {
         for (int j = 0; j < width; j++)
         {
-            matrix[i, j] = new Random().Next(-30, 30);
+            matrix[i, j] = new Random().Next(0, 30);
         }
     }
 }
 
-void FindAveragebyColumns(int[,] matrix, int height, int width);{
+void FindAveragebyColumns(int [,] matrix, int height, int width)
+{
     for (int  j= 0; j < width; j++)
     {
         int sum = 0;
-        int count = 0;
         double average = 0;
         for (int i = 0; i < height; i++)
         {
-            sum =+ matrix[i,j];
-            count++;
+            sum += matrix[i,j];
         } 
-        average = sum / count;
-        Console.WriteLine($"Среднее арифметическое элементов в столбце {j} равно {average:F3}");
+        average = sum/height;
+        Console.WriteLine($"Среднее арифметическое элементов в столбце равно {average:F3}");
     }
 }
+
+
 
      
